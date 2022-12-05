@@ -1,6 +1,6 @@
 package com.hcf.springcloudlearning.service;
 
-import com.hcf.springcloudlearning.entities.Payment;
+import com.hcf.entities.Payment;
 import org.apache.ibatis.annotations.Param;
 
 public interface PaymentService {

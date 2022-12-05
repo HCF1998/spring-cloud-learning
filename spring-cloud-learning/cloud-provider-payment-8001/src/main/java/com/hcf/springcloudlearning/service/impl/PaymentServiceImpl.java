@@ -1,7 +1,7 @@
 package com.hcf.springcloudlearning.service.impl;
 
+import com.hcf.entities.Payment;
 import com.hcf.springcloudlearning.dao.PaymentDao;
-import com.hcf.springcloudlearning.entities.Payment;
 import com.hcf.springcloudlearning.service.PaymentService;
 import org.springframework.stereotype.Service;
 

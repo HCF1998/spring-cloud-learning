@@ -1,5 +1,6 @@
 package com.hcf.springcloudlearning.dao;
 
+import com.hcf.entities.Payment;
 import com.hcf.springcloudlearning.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
