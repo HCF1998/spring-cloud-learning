@@ -1,8 +1,8 @@
-package com.hcf.springcloudlearning.service.impl;
+package com.hcf.service.impl;
 
 import com.hcf.entities.Payment;
-import com.hcf.springcloudlearning.dao.PaymentDao;
-import com.hcf.springcloudlearning.service.PaymentService;
+import com.hcf.dao.PaymentDao;
+import com.hcf.service.PaymentService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

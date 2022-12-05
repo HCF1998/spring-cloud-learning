@@ -1,4 +1,4 @@
-package com.hcf.springcloudlearning.service;
+package com.hcf.service;
 
 import com.hcf.entities.Payment;
 import org.apache.ibatis.annotations.Param;

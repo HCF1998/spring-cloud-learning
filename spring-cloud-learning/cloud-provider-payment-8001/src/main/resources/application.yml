@@ -14,4 +14,4 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.hcf.springcloudlearning.entities
+  type-aliases-package: com.hcf.entities

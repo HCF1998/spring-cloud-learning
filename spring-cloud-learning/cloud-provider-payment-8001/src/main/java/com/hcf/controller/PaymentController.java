@@ -1,9 +1,9 @@
-package com.hcf.springcloudlearning.controller;
+package com.hcf.controller;
 
 
 import com.hcf.commom.CommonResult;
 import com.hcf.entities.Payment;
-import com.hcf.springcloudlearning.service.PaymentService;
+import com.hcf.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
