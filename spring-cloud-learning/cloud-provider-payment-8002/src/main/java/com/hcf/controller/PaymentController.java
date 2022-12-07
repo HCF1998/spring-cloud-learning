@@ -36,7 +36,6 @@ public class PaymentController {
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
         Payment payment = paymentService.getPaymentById(id);
         log.info("get result: " + payment);
-        int a = 1;
         if (payment != null) {
             return new CommonResult<>(200, "get success,server port: " + serverPort, payment);
         } else {
