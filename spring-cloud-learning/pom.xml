@@ -6,6 +6,7 @@
         <module>cloud-consumer-order-8000</module>
         <module>cloud-api-commons</module>
         <module>cloud-eureka-server</module>
+        <module>cloud-eureka-server2</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
