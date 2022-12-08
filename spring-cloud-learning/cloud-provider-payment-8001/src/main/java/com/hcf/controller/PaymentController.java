@@ -6,9 +6,12 @@ import com.hcf.entities.Payment;
 import com.hcf.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @Slf4j
@@ -16,6 +19,9 @@ public class PaymentController {
 
     @Resource
     private PaymentService paymentService;
+
+    @Resource
+    private DiscoveryClient discoveryClient;
 
     @Value("${server.port}")
     private String serverPort;
@@ -42,5 +48,22 @@ public class PaymentController {
         } else {
             return new CommonResult<>(400, "get failure", null);
         }
+    }
+
+    @GetMapping("/payment/discovery")
+    public Object discovery() {
+        List<String> services = discoveryClient.getServices();
+        for (String service : services) {
+            log.info("*****service:{}", service);
+        }
+        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-CONSUMER-SERVICE");
+        for (ServiceInstance instance : instances) {
+            log.info("*****instance: serviceId = {}  host = {} port = {} uri = {}",
+                    instance.getServiceId(),
+                    instance.getHost(),
+                    instance.getPort(),
+                    instance.getUri());
+        }
+        return discoveryClient;
     }
 }
