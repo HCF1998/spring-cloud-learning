@@ -10,6 +10,8 @@
         <module>cloud-provider-payment-8002</module>
         <module>cloud-provider-payment-8004</module>
         <module>cloud-consumer-order-7999</module>
+        <module>cloud-consul-provider-8006</module>
+        <module>cloud-consul-order-7998</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
