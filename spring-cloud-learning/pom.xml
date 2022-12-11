@@ -12,6 +12,7 @@
         <module>cloud-consumer-order-7999</module>
         <module>cloud-consul-provider-8006</module>
         <module>cloud-consul-order-7998</module>
+        <module>cloud-feign-consumer-order-7997</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
