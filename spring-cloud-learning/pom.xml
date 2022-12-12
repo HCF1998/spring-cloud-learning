@@ -13,6 +13,7 @@
         <module>cloud-consul-provider-8006</module>
         <module>cloud-consul-order-7998</module>
         <module>cloud-feign-consumer-order-7997</module>
+        <module>cloud-hystrix-provider-payment-8001</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
