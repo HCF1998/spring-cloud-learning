@@ -24,10 +24,28 @@ spring:
           predicates:
             - Path=/payment/lb/**
 
-        - id: guangzhou2
+#        - id: guangzhou2
+#          uri: http://pc.nfapp.southcn.com
+#          predicates:
+#            - Path=/guangzhou
+
+        # 2023-01-04T16:54:18.815948500+08:00[Asia/Shanghai]
+        - id: guangzhou3
           uri: http://pc.nfapp.southcn.com
           predicates:
             - Path=/guangzhou
+            # After: 在该时间之后路由才会生效
+            - After=2023-01-03T16:54:18.815948500+08:00[Asia/Shanghai]
+            # Before: 在该时间之前路由才会生效
+#            - Before=2023-01-03T16:54:18.815948500+08:00[Asia/Shanghai]
+            # Between: 在该时间区间路由才会生效
+#            - Between=2023-01-03T16:54:18.815948500+08:00[Asia/Shanghai],2023-01-05T16:54:18.815948500+08:00[Asia/Shanghai]
+            # Cookie: 携带Cookie
+            - Cookie=username,hcf
+            # Header: 携带请求头
+            - Header=X-Request-Id,\d+
+
+
 
 eureka:
   instance:
