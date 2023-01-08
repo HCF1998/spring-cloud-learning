@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          # 配置地址
+          uri: https://github.com/HCF1998/spring-cloud-config-learning.git
+          # 搜索目录
+          search-paths:
+            - spring-cloud-config-learning
+      # 读取分支
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
