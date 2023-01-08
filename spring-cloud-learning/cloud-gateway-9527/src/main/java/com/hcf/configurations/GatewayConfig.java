@@ -1,4 +1,4 @@
-package com.hcf.config;
+package com.hcf.configurations;
 
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
